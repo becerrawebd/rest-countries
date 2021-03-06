@@ -8,6 +8,7 @@ module.exports = {
         'light': 'var(--bg-color-light)',
         'shadow': 'var(--shadow-color)',
         'primary': 'var(--color-primary)',
+        'input': 'var(--color-input-light)',
       }
     }
   },

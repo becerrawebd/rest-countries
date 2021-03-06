@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect } from 'react';
 import { useLocalStorage } from "../hooks/useLocalStorage"
 import { FontAwesomeIcon} from "@fortawesome/react-fontawesome"
 import { faMoon } from "@fortawesome/free-solid-svg-icons"
@@ -18,15 +18,15 @@ const SwitchTheme = () => {
   }
 
   return (
-    <div class="bg-red-500 h-6">
+    <div className="relative px-4 py-2">
       <FontAwesomeIcon 
-        icon={ theme=='light' ? faRegularMoon : faMoon} 
+        icon={ theme==='light' ? faRegularMoon : faMoon} 
         className="mr-4"
       />
-      { theme === 'light' ? "Light Mode" : "Dark Mode" }
+      { theme === 'light' ? "Light " : "Dark " } Mode
     <input
       type="checkbox"
-      className="bg-red-500 w-auto h-auto hidden" 
+      className="w-full h-full absolute top-0 left-0 opacity-0 cursor-pointer" 
       onChange={handleSwitchTheme}
     />
     </div>
